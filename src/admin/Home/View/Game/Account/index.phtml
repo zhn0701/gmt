@@ -1,0 +1,190 @@
+<include file="Common/header" />
+<body>
+<include file="Common/menu" />
+<div class="container theme-showcase">
+    <div class="alert alert-danger hidden " role="alert" id='warn'>
+        <strong>错误!</strong> Change a few things up and try submitting again.
+    </div>
+    <form action="" method="GET" role="form" class="well">
+        <fieldset>
+            <legend>账号</legend>            
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" >游戏大区</span>
+                        <select name="serverId" id="serverId" class="form-control">
+                            <option value="0">请选择</option>
+                            <?php foreach ($select->server as $k => $v): ?>
+                                <option value="<?php echo $k; ?>"><?php echo $k . ":" . $v['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">账号</span>
+                        <input type="text" name="account" id="account" value="" class="form-control " placeholder="">
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" id="sub" data-loading-text="提交中...">搜索</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="container" id="datalist">
+
+</div>
+<script>
+    $(function () {
+        $("#sub").click(function (event) {
+            event.preventDefault();
+            var btn = $(this).button('loading')
+            var serverId = $("#serverId").val();
+            var account = $("#account").val();
+            if (serverId == 0) {
+                $("#warn").html("<strong>错误!</strong> 请选择游戏大区");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            if (account == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写游戏账号");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            $.ajax({
+                url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/getData/"; ?>",
+                dataType: "html",
+                cache: false,
+                data: {serverId: serverId, account: account},
+                type: "GET",
+                success: function (data) {
+                    $("#datalist").html(data);
+                    $("#warn").addClass("hidden");
+                    btn.button('reset');
+                }
+            })
+        })
+        $(document).on("click", "#updatepwd", function (event) {
+            event.preventDefault();
+            var pwd = $("#pwd").val();
+            if (pwd == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写修改的密码");
+                $("#warn").removeClass("hidden");
+                return;
+            }
+            show_dialog({
+                title: "修改确认",
+                html: "该操作会有延迟性，确认修改？",
+                submit_callback: function () {
+                    $("#btnok").button('loading');
+                    $("#warn").addClass("hidden");
+                    var html = "";
+                    var name = $("#updatepwd").attr('data-name');
+                    var pwd = $("#pwd").val();
+                    var serverId = $("#updatepwd").attr("data-serverId");
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/updatePwd/"; ?>";
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        data: {name: name, serverId: serverId, pwd: pwd, act: 1},
+                        success: function (data) {
+                            var info = {
+                                url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/updatePwd/"; ?>",
+                                requestData: {id: data.info.id, serverId: data.info.serverId, act: 2}
+                            };
+                            gameRoundRequest(data, info);
+                        }
+                    });
+                }
+            });
+        });
+        $(document).on("click", "#unlock", function (event) {
+            event.preventDefault();
+            show_dialog({
+                title: "账号解冻确认",
+                html: "该操作会有延迟性，确认修改？",
+                submit_callback: function () {
+                    $("#btnok").button('loading');
+                    var html = "";
+                    var name = $("#unlock").attr('data-name');
+                    var serverId = $("#updatepwd").attr("data-serverId");
+                    var state = "0";
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/setState/"; ?>";
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        data: {name: name, serverId: serverId, state: state, act: 1},
+                        success: function (data) {
+                            if (data.code == '1') {
+                                var info = {
+                                    url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/setState/"; ?>",
+                                    requestData: {id: data.info.id, serverId: data.info.serverId, act: 2},
+                                    flag:0
+                                };
+                                gameRoundRequest(data, info);
+                            }
+                            else {
+                                $(".modal-body").html('<div class="alert alert-danger" role="alert"><strong>error!</strong>' + data.msg + '</div>');
+                                setTimeout(function () {
+                                    $("#infoModal20140114").modal("hide");
+                                }, 2000);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+        $(document).on("click", "#lock", function (event) {
+            event.preventDefault();
+            show_dialog({
+                title: "账号解冻确认",
+                html: "该操作会有延迟性，确认修改？",
+                submit_callback: function () {
+                    $("#btnok").button('loading');
+                    var html = "";
+                    var name = $("#unlock").attr('data-name');
+                    var serverId = $("#updatepwd").attr("data-serverId");
+                    var state = "1";
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/setState/"; ?>";
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        data: {name: name, serverId: serverId, state: state, act: 1},
+                        success: function (data) {
+                            if (data.code == '1') {
+                                var info = {
+                                    url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/setState/"; ?>",
+                                    requestData: {id: data.info.id, serverId: data.info.serverId, act: 2},
+                                    flag:0
+                                };
+                                gameRoundRequest(data, info);
+                            }
+                            else {
+                                $(".modal-body").html('<div class="alert alert-danger" role="alert"><strong>error!</strong>' + data.msg + '</div>');
+                                setTimeout(function () {
+                                    $("#infoModal20140114").modal("hide");
+                                }, 2000);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+<include file="Common/footer" />

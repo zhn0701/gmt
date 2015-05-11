@@ -1,0 +1,972 @@
+[ 2015-05-11T09:54:10+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Pub/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\77dd2fba1527518246496a04a6939446.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2015-05-11T09:54:13+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Pub/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001628s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`user` [ RunTime:0.0236s ]
+SQL: SELECT * FROM rgz_admin.user WHERE `account` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE rgz_admin.user SET `account`='admin',`name`='admin',`password`='admin',`createTime`='0',`lastLoginTime`='1431309253',`status`='0',`isadmin`='1' WHERE `id` = 1 [ RunTime:0.0591s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`permission` [ RunTime:0.0052s ]
+SQL: SELECT * FROM rgz_admin.permission  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: roleInfo D:\wamp\www\gmt\src\admin\Home\Controller\Pub\LoginController.class.php 第 57 行.
+NOTIC: [8] Undefined variable: permissionList D:\wamp\www\gmt\src\admin\Home\Controller\Pub\LoginController.class.php 第 57 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 48 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 67 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+NOTIC: [2048] Non-static method Home\Lib\Access::recursion() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 75 行.
+
+[ 2015-05-11T09:54:14+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0364s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Index','index','/gmt/src/admin.php/Home/Index','admin','1','{\"post\":[],\"get\":[]}','1431309253','127.0.0.1') [ RunTime:0.0483s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\70740c3f44cd68abe650378039f6892c.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001722s ]
+
+[ 2015-05-11T09:54:18+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001717s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431309258','127.0.0.1') [ RunTime:0.0499s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2015-05-11T09:54:46+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309258594
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001375s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0018s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309258594','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431309258594\"}}','1431309283','127.0.0.1') [ RunTime:0.2187s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002848s ]
+
+[ 2015-05-11T10:05:55+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Gameconfig/Server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002004s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Gameconfig/Server','index','/gmt/src/admin.php/Home/Gameconfig/Server','admin','1','{\"post\":[],\"get\":[]}','1431309954','127.0.0.1') [ RunTime:0.0567s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `server` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `server` LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\e5da6230d651444638830682e6e79bd0.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2015-05-11T10:05:57+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431309956','127.0.0.1') [ RunTime:0.0596s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2015-05-11T10:05:58+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Notice','index','/gmt/src/admin.php/Home/Game/Notice','admin','1','{\"post\":[],\"get\":[]}','1431309958','127.0.0.1') [ RunTime:0.0638s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notice` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `notice` LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000401s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\89ebe8f28969e3fa74682398402c828f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2015-05-11T10:05:59+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Mail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0014s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Mail','index','/gmt/src/admin.php/Home/Game/Mail','admin','1','{\"post\":[],\"get\":[]}','1431309959','127.0.0.1') [ RunTime:0.0560s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\f91997e23c15384b50e77b031649925c.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018738s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2015-05-11T10:06:08+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Index','index','/gmt/src/admin.php/Home/Index','admin','1','{\"post\":[],\"get\":[]}','1431309968','127.0.0.1') [ RunTime:0.0592s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\70740c3f44cd68abe650378039f6892c.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001509s ]
+
+[ 2015-05-11T10:06:11+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Admin/Role
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001618s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Admin/Role','index','/gmt/src/admin.php/Home/Admin/Role','admin','1','{\"post\":[],\"get\":[]}','1431309971','127.0.0.1') [ RunTime:0.0531s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `rgz_admin`.`role` [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM rgz_admin.role LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM rgz_admin.role LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000438s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\75a30eba0156eefa0dda43b803134dfd.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001343s ]
+
+[ 2015-05-11T10:06:12+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Role
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0013s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Role','index','/gmt/src/admin.php/Home/Game/Role','admin','1','{\"post\":[],\"get\":[]}','1431309972','127.0.0.1') [ RunTime:0.0585s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000403s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\e5ff0b9553d4a9aacd620da5c0d85d2f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2015-05-11T10:06:13+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Notice','index','/gmt/src/admin.php/Home/Game/Notice','admin','1','{\"post\":[],\"get\":[]}','1431309973','127.0.0.1') [ RunTime:0.0602s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notice` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `notice` LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\89ebe8f28969e3fa74682398402c828f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2015-05-11T10:06:14+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431309974','127.0.0.1') [ RunTime:0.0541s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2015-05-11T10:06:15+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Role
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Role','index','/gmt/src/admin.php/Home/Game/Role','admin','1','{\"post\":[],\"get\":[]}','1431309975','127.0.0.1') [ RunTime:0.0595s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\e5ff0b9553d4a9aacd620da5c0d85d2f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2015-05-11T10:06:16+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0012s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Notice','index','/gmt/src/admin.php/Home/Game/Notice','admin','1','{\"post\":[],\"get\":[]}','1431309976','127.0.0.1') [ RunTime:0.0505s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notice` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `notice` LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\89ebe8f28969e3fa74682398402c828f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-05-11T10:06:18+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Mail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Mail','index','/gmt/src/admin.php/Home/Game/Mail','admin','1','{\"post\":[],\"get\":[]}','1431309978','127.0.0.1') [ RunTime:0.0377s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000416s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\f91997e23c15384b50e77b031649925c.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001395s ]
+
+[ 2015-05-11T10:06:19+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431309979','127.0.0.1') [ RunTime:0.0558s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001048s ]
+
+[ 2015-05-11T10:06:20+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Gameconfig/Server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Gameconfig/Server','index','/gmt/src/admin.php/Home/Gameconfig/Server','admin','1','{\"post\":[],\"get\":[]}','1431309980','127.0.0.1') [ RunTime:0.0943s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `server` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `server` LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\e5da6230d651444638830682e6e79bd0.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2015-05-11T10:06:27+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431309987','127.0.0.1') [ RunTime:0.0582s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001194s ]
+
+[ 2015-05-11T10:06:31+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309987586
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309987586','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431309987586\"}}','1431309991','127.0.0.1') [ RunTime:0.0524s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2015-05-11T10:39:25+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309987587
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0019s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431309987587','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431309987587\"}}','1431311961','127.0.0.1') [ RunTime:0.0506s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000475s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2015-05-11T10:39:37+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431311977','127.0.0.1') [ RunTime:0.0607s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2015-05-11T10:39:40+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431311977495
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431311977495','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431311977495\"}}','1431311980','127.0.0.1') [ RunTime:0.0837s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000874s ]
+
+[ 2015-05-11T10:39:46+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/updatePwd/?name=test_1&serverId=1&pwd=123456&act=1&_=1431311977496
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','updatePwd','/gmt/src/admin.php/Home/Game/Account/updatePwd/?name=test_1&serverId=1&pwd=123456&act=1&_=1431311977496','admin','1','{\"post\":[],\"get\":{\"name\":\"test_1\",\"serverId\":\"1\",\"pwd\":\"123456\",\"act\":\"1\",\"_\":\"1431311977496\"}}','1431311986','127.0.0.1') [ RunTime:0.0536s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+
+[ 2015-05-11T10:39:47+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/updatePwd/?id=119&serverId=1&act=2&_=1431311977497
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0022s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','updatePwd','/gmt/src/admin.php/Home/Game/Account/updatePwd/?id=119&serverId=1&act=2&_=1431311977497','admin','1','{\"post\":[],\"get\":{\"id\":\"119\",\"serverId\":\"1\",\"act\":\"2\",\"_\":\"1431311977497\"}}','1431311987','127.0.0.1') [ RunTime:0.0626s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+
+[ 2015-05-11T10:39:48+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/updatePwd/?id=119&serverId=1&act=2&_=1431311977498
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','updatePwd','/gmt/src/admin.php/Home/Game/Account/updatePwd/?id=119&serverId=1&act=2&_=1431311977498','admin','1','{\"post\":[],\"get\":{\"id\":\"119\",\"serverId\":\"1\",\"act\":\"2\",\"_\":\"1431311977498\"}}','1431311988','127.0.0.1') [ RunTime:0.0575s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+
+[ 2015-05-11T10:40:15+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0014s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431312015','127.0.0.1') [ RunTime:0.0540s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001415s ]
+
+[ 2015-05-11T10:40:20+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015857
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0019s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015857','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431312015857\"}}','1431312019','127.0.0.1') [ RunTime:0.0480s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000491s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002162s ]
+
+[ 2015-05-11T10:40:26+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/updatePwd/?name=test_1&serverId=1&pwd=123456&act=1&_=1431312015858
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','updatePwd','/gmt/src/admin.php/Home/Game/Account/updatePwd/?name=test_1&serverId=1&pwd=123456&act=1&_=1431312015858','admin','1','{\"post\":[],\"get\":{\"name\":\"test_1\",\"serverId\":\"1\",\"pwd\":\"123456\",\"act\":\"1\",\"_\":\"1431312015858\"}}','1431312025','127.0.0.1') [ RunTime:0.2383s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+
+[ 2015-05-11T10:40:27+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/updatePwd/?id=120&serverId=1&act=2&_=1431312015859
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0018s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','updatePwd','/gmt/src/admin.php/Home/Game/Account/updatePwd/?id=120&serverId=1&act=2&_=1431312015859','admin','1','{\"post\":[],\"get\":{\"id\":\"120\",\"serverId\":\"1\",\"act\":\"2\",\"_\":\"1431312015859\"}}','1431312027','127.0.0.1') [ RunTime:0.0419s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+
+[ 2015-05-11T11:18:46+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015860
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0018s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015860','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431312015860\"}}','1431314301','127.0.0.1') [ RunTime:0.0579s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001706s ]
+
+[ 2015-05-11T11:18:49+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015861
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0016s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','getData','/gmt/src/admin.php/Home/Game/Account/getData/?serverId=1&account=test_1&_=1431312015861','admin','1','{\"post\":[],\"get\":{\"serverId\":\"1\",\"account\":\"test_1\",\"_\":\"1431312015861\"}}','1431314329','127.0.0.1') [ RunTime:0.0552s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite D:\wamp\www\gmt\src\libs\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000503s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002234s ]
+
+[ 2015-05-11T11:20:17+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0018s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Account','index','/gmt/src/admin.php/Home/Game/Account','admin','1','{\"post\":[],\"get\":[]}','1431314416','127.0.0.1') [ RunTime:0.0492s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000347s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\b24c558d23aba86b06e98e3cbbc4508a.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2015-05-11T11:20:18+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Role
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001556s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0017s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Role','index','/gmt/src/admin.php/Home/Game/Role','admin','1','{\"post\":[],\"get\":[]}','1431314418','127.0.0.1') [ RunTime:0.0530s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\e5ff0b9553d4a9aacd620da5c0d85d2f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2015-05-11T11:20:19+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Mail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0019s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Mail','index','/gmt/src/admin.php/Home/Game/Mail','admin','1','{\"post\":[],\"get\":[]}','1431314419','127.0.0.1') [ RunTime:0.0494s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\f91997e23c15384b50e77b031649925c.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018714s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2015-05-11T11:20:20+08:00 ] 127.0.0.1 /gmt/src/admin.php/Home/Game/Notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `rgz_admin`.`log` [ RunTime:0.0015s ]
+SQL: INSERT INTO rgz_admin.log (`controller`,`action`,`url`,`account`,`accountId`,`param`,`createTime`,`ip`) VALUES ('Game/Notice','index','/gmt/src/admin.php/Home/Game/Notice','admin','1','{\"post\":[],\"get\":[]}','1431314420','127.0.0.1') [ RunTime:0.1392s ]
+NOTIC: [2048] Non-static method Home\Lib\Access::_checkPermission() should not be called statically D:\wamp\www\gmt\src\admin\Home\Lib\Access.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `server` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `server` WHERE `stype` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notice` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `notice` LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\gmt\src\admin\Runtime\Cache\Home\89ebe8f28969e3fa74682398402c828f.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+

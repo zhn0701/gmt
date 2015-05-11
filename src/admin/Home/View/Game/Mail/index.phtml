@@ -1,0 +1,147 @@
+<include file="Common/header" />
+<body>
+<include file="Common/menu" />
+<div class="container theme-showcase">
+    <div class="alert alert-danger hidden " role="alert" id='warn'>
+        <strong>错误!</strong> Change a few things up and try submitting again.
+    </div>
+    <form action="" method="GET" role="form" class="well">
+        <fieldset>
+            <legend>发送邮件/道具</legend>            
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" >游戏大区</span>
+                        <select name="serverId" id="serverId" class="form-control">
+                            <option value="0">请选择</option>
+                            <?php foreach ($select->server as $k => $v): ?>
+                                <option value="<?php echo $k; ?>"><?php echo $k . ":" . $v['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">标题</span>
+                        <input type="text" name="title" id="title" value="" class="form-control " placeholder="">
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">内容</span>
+                        <input type="text" name="content" id="content" value="" class="form-control " placeholder="">
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">角色名</span>
+                        <textarea class="form-control" rows="6" id="roles" placeholder="角色名，半角逗号分隔"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">道具ID</span>
+                        <textarea class="form-control" rows="6" id="itemIds" placeholder="发送道具，半角逗号分隔"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">道具数量</span>
+                        <textarea class="form-control" rows="6" id="itemNums" placeholder="道具数量，半角逗号分隔和道具ID一一对应，必须保持一致"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" id="sub" data-loading-text="提交中...">发送</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="container" id="datalist">
+
+</div>
+<script>
+    $(function () {
+        $("#sub").click(function (event) {
+            event.preventDefault();
+            var serverId = $("#serverId").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            var roles = $("#roles").val();
+            var itemIds = $("#itemIds").val();
+            var itemNums = $("#itemNums").val();
+            if (serverId == 0) {
+                $("#warn").html("<strong>错误!</strong> 请选择游戏大区");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            if (roles == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写发送角色");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            if (title == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写发送标题");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            if (content == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写发送内容");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            show_dialog({
+                title: "发送确认",
+                html: "该操作会有延迟性，确认发送？",
+                submit_callback: function () {
+                    $("#btnok").button('loading');
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/send/"; ?>";
+                    $.ajax({
+                        type: 'POST',
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        data: {title: title, content: content, roles: roles, itemIds: itemIds, itemNums: itemNums, serverId: serverId, act: 1},
+                        success: function (data) {
+                            if (data.code == '1') {
+                                var info = {
+                                    url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/send/"; ?>",
+                                    requestData: {id: data.info.id, serverId: data.info.serverId, act: 2}
+                                };
+                                gameRoundRequest(data, info);
+                            }
+                            else {
+                                $(".modal-body").html('<div class="alert alert-danger" role="alert"><strong>error!</strong>' + data.msg + '</div>');
+                                setTimeout(function () {
+                                    $("#infoModal20140114").modal("hide");
+                                }, 2000);
+                            }
+                        }
+                    });
+                }
+            });
+        })
+    });
+</script>
+<include file="Common/footer" />

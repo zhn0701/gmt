@@ -1,0 +1,58 @@
+<include file="Common/header" />
+<body>
+    <div class="container theme-showcase">
+        <form class="form-horizontal">
+            <?php foreach ($list as $v) { ?>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="userids" data-id="<?php echo $v['id']; ?>" value="1" <?php echo $v['ischecked'] == '1' ? "checked" : ""; ?>>
+                        <?php echo $v['account'] . "-" . $v['name']; ?>
+                    </label>
+                </div>
+            <?php } ?>
+            <p></p>
+            <div class="form-group">
+                <div class="col-sm-offset-1">
+                    <input type="hidden" name='roleid' id="roleid" value='<?php echo $id; ?>'>
+                    <button type="button" class="btn btn-primary" id="save"  data-loading-text="提交中...">提交</button>                          
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $("#save").click(function () {
+            var userIds = '';
+            $("input.userids:checked").each(function () {
+                userIds += $(this).attr('data-id') + ',';
+            });
+            var roleId = $("#roleid").val();
+            show_dialog({
+                title: "操作确认",
+                html: '确认选中用户授权用户组？',
+                submit_callback: function () {
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__" . "/roleUser"; ?>";
+                    $.ajax({
+                        type: 'POST',
+                        data: {roleId: roleId, userIds: userIds},
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        success: function (data) {
+                            show_dialog({
+                                title: "返回信息",
+                                html: data.msg,
+                                cancel: false,
+                                submit_callback: function () {
+                                    window.location.reload();
+                                    return false;
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            return false;
+
+        });
+    </script>
+<include file="Common/footer" />

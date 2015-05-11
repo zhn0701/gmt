@@ -1,0 +1,98 @@
+<include file="Common/header" />
+<body>
+    <div class="alert alert-danger hidden" role="alert" id='warn'>
+        <strong>错误!</strong>
+    </div>
+    <div class="alert alert-success hidden" role="alert" id='success'>
+        <strong>成功!</strong>
+    </div>
+    <div class="modal-body2">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">操作角色名</label>
+                <div class="col-sm-4">
+                    <?php echo $name; ?>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">删减道具ID</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="itemId" name="itemId" placeholder="删减道具ID">
+                </div>
+            </div>            
+            <div class="form-group">
+                <label for="inputPassword" class="col-sm-3 control-label">道具表</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id='selectItem' name='selectItem'>
+                        <option value='0'>呵呵</option>
+                        <?php foreach ($item as $k => $v) { ?>                                    
+                            <option value='<?php echo $k; ?>'><?php echo $k . ":" . $v; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>  
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">删减道具数量</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="itemNum" name="itemNum" placeholder="删减道具数量">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-4">
+                    <input type="hidden" name='serverId' id='serverId' value='<?php echo $serverId; ?>'>
+                    <input type="hidden" name='name' id='name' value='<?php echo $name; ?>'>
+                    <button type="button" class="btn btn-primary" id="save"  data-loading-text="提交中...">提交</button>                           
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $("#itemId").change(function () {
+            $("#selectItem").val($(this).val());
+        });
+        $("#selectItem").change(function () {
+            $("#itemId").val($(this).val());
+        });
+        $("#save").click(function () {
+            var itemId = $("#itemId").val();
+            var selectItem = $("#selectItem").val();
+            var itemNum = $("#itemNum").val();
+            var serverId = $("#serverId").val();
+            var name = $("#name").val();
+            if(itemId != selectItem){
+                $("#warn").html("<strong>错误!</strong> 道具编号不正确");
+                $("#warn").removeClass("hidden");
+                return false;
+            }
+            if(itemNum == '' || isNaN(itemNum) ){
+                $("#warn").html("<strong>错误!</strong> 道具数量必须是数字");
+                $("#warn").removeClass("hidden");
+                return false;
+            }
+            show_dialog({
+                title: "修改确认",
+                html: "该操作会有延迟性，确认修改？",
+                submit_callback: function () {
+                    $("#btnok").button('loading');
+
+                    var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/delItem/"; ?>";
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        dataType: "json",
+                        data: {itemId: itemId, itemNum: itemNum, serverId: serverId, name: name, act: 2},
+                        success: function (data) {
+                            var info = {
+                                url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/delItem/"; ?>",
+                                requestData: {id: data.info.id, serverId: data.info.serverId, act: 3}
+                            };
+                            gameRoundRequest(data, info);
+                        }
+                    });
+                }
+            });
+
+        });
+    </script>
+<include file="Common/footer" />

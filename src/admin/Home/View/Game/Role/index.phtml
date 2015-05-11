@@ -1,0 +1,141 @@
+<include file="Common/header" />
+<body>
+<include file="Common/menu" />
+<div class="container theme-showcase">
+    <div class="alert alert-danger hidden " role="alert" id='warn'>
+        <strong>错误!</strong> Change a few things up and try submitting again.
+    </div>
+    <form action="" method="GET" role="form" class="well">
+        <fieldset>
+            <legend>角色</legend>            
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" >游戏大区</span>
+                        <select name="serverId" id="serverId" class="form-control">
+                            <option value="0">请选择</option>
+                            <?php foreach ($select->server as $k => $v): ?>
+                                <option value="<?php echo $k; ?>"><?php echo $k . ":" . $v['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">角色名称</span>
+                        <input type="text" name="account" id="account" value="" class="form-control " placeholder="">
+                    </div>
+                </div>
+            </div>
+            <p class="help-block"></p>
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" id="sub" data-loading-text="提交中...">搜索</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="container" id="datalist">
+
+</div>
+<div class="modal fade bs-example-modal-lg" id="role-user-Modal" tabindex="-10" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog"  style='width:600px'>
+        <div class="modal-content">  
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><span class="model-name"></span></h4>
+            </div> 
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe id="role-user-iframe" class="embed-responsive-item" src="" width='98.6%' height='700'></iframe>
+                </div>
+
+            </div>  
+            <div class="modal-footer">   
+                <button class="btn" data-dismiss="modal" >关闭</button>  
+            </div> 
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#sub").click(function (event) {
+            event.preventDefault();
+            var btn = $(this).button('loading')
+            var serverId = $("#serverId").val();
+            var account = $("#account").val();
+            if (serverId == 0) {
+                $("#warn").html("<strong>错误!</strong> 请选择游戏大区");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            if (account == '') {
+                $("#warn").html("<strong>错误!</strong> 请填写游戏账号");
+                $("#warn").removeClass("hidden");
+                btn.button('reset');
+                return;
+            }
+            $.ajax({
+                url: "http://" + "<?php echo BASE_URL . "__CONTROLLER__/getData/"; ?>",
+                dataType: "html",
+                cache: false,
+                data: {serverId: serverId, account: account},
+                type: "GET",
+                success: function (data) {
+                    $("#datalist").html(data);
+                    $("#warn").addClass("hidden");
+                    btn.button('reset');
+                }
+            })
+        })
+        $(document).on("click", "#bag", function (event) {
+            event.preventDefault();
+            var html = "";
+            var id = $(this).attr('data-id');
+            var serverId = $(this).attr("data-serverId");
+            var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/getRoleBag/"; ?>";
+            $.ajax({
+                type: 'GET',
+                url: url,
+                cache: false,
+                dataType: "json",
+                data: {id: id,serverId:serverId},
+                success: function (data) {
+                    if (data.code == '1') {
+                        html += '<table class="table table-bordered table-striped table-condensed"><thead><tr><th>物品位置索引</th><th>物品数量</th><th>物品类型</th><th>物品TPID</th></thead><tbody>';
+                        for(var x in data.info){
+                            html += '<tr><td>' + data.info[x].itemindex + '</td><td>' + data.info[x].itemcount + '</td><td>' + data.info[x].itemtype + '</td><td>' + data.info[x].itemtpid + '</td></tr>';
+                        }
+                        html += '</tbody></table>';
+                        show_dialog({
+                            title: "背包信息",
+                            html: html
+                        });
+                    }
+                    else {
+                        show_dialog({
+                            title: "背包信息",
+                            html: "无访问权限"
+                        });
+                    }
+                }
+            });
+        });
+        $(document).on("click", "#delItem", function (event) {
+            event.preventDefault();
+            var name = $("#delItem").attr('data-name'); 
+            var serverId = $("#delItem").attr('data-serverId'); 
+            
+            $(".modal-title").html(name + "删减道具和属性");
+            var frameSrc = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/delItem/"; ?>" + "name/" + name + "/serverId/" + serverId + "/act/1";
+
+            $('#role-user-Modal').modal({show: true});
+            $('#role-user-iframe').attr("src", frameSrc);            
+        });
+    });
+</script>
+<include file="Common/footer" />

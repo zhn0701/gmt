@@ -1,0 +1,21 @@
+[ 2015-04-24T10:36:00+08:00 ] 127.0.0.1 /PayGateway_v2/src/admin.php/Home/Pub/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\PayGateway_V2\src\admin\Runtime\Cache\Home\b461cb9c076995ba23fa9e55dc0c3477.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+

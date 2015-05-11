@@ -1,0 +1,60 @@
+<include file="Common/header" />
+<body>
+    <link rel="stylesheet" href="http://<?php echo C('STATIC_PUBLIC'); ?>/css/login.css">
+    <div class="container">
+        <div class="alert alert-danger hidden " role="alert" id='warn'>
+            <strong>错误!</strong> Change a few things up and try submitting again.
+        </div>
+        <div class="alert alert-success hidden" role="alert" id='success'>
+            <strong>成功!</strong> You successfully read this important alert message.
+        </div>
+        <form class="form-signin">
+            <h2 class="form-signin-heading" id='t1'>RGZ GM Tools</h2>
+            <label for="inputAccount" class="sr-only">Account</label>
+            <input type="text" id="inputAccount" class="form-control" placeholder="Account" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <!--
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"  value="remember-me"> Remember me
+              </label>
+            </div>
+            -->
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id='sub' autocomplete="off" data-loading-text="Loading...">登录</button>
+        </form>
+
+    </div> <!-- /container -->  
+    <script>
+        $('#sub').on('click', function (event) {
+            event.preventDefault();
+            var btn = $(this).button('loading')
+            var account = $("#inputAccount").val();
+            var password = $("#inputPassword").val();
+            // business logic...
+            //btn.button('reset')
+            var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__" . "/login"; ?>";
+            $.ajax({
+                type: 'POST',
+                data: {account: account, password: password},
+                url: url,
+                cache: false,
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        if (data.code == 1) {
+                            $("#success").html("<strong>登录成功!</strong> " + data.msg);
+                            $("#success").removeClass("hidden");
+                            window.location.href = "http://" + "<?php echo BASE_URL . "__MODULE__" . "/Index"; ?>";
+                        }
+                        else {
+                            $("#warn").html("<strong>错误!</strong> " + data.msg);
+                            $("#warn").removeClass("hidden");
+                            btn.button('reset')
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+<include file="Common/footer" />

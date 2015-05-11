@@ -1,0 +1,268 @@
+<include file="Common/header" />
+<body>
+<include file="Common/menu" />
+<div class="container theme-showcase">
+    <header>
+        <h1>权限表<a class="btn btn-primary" id="add" href="javascript:void(0)">添加权限</a></h1>
+    </header>
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>模块</th>
+                    <th>模块代码</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($list as $module) { ?>                
+                    <tr>
+                        <td><?php echo $module['name']; ?></td>
+                        <td  class="m" data-id='<?php echo $module['id']; ?>'><?php echo $module['code']; ?></td>
+                        <td>
+                            <i class="glyphicon glyphicon-edit"></i><a href="javascript:void(0)" class='pedit'  data-id='<?php echo $module['id'] ?>' data-toggle="tooltip" title="编辑">编辑</a>
+                            <i class="glyphicon glyphicon-trash"></i><a class="cartoon-delete" href="javascript:void(0);" data-id="<?php echo $module['id'] ?>" data-toggle="tooltip" title="删除">删除</a>
+                        </td>
+                    </tr>
+                    <tr id="s<?php echo $module['id']; ?>" class="hidden">
+                        <td>&nbsp;&nbsp;&nbsp;|_</td>
+                        <td>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>控制器</th>
+                                        <th>控制器代码</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($module['child'] as $menu) { ?>
+                                        <tr>
+                                            <td><?php echo $menu['name']; ?></td>
+                                            <td class="m" data-id='<?php echo $menu['id']; ?>'><?php echo $menu['code']; ?></td>
+                                            <td>
+                                                <i class="glyphicon glyphicon-edit"></i><a href="javascript:void(0)" class='pedit'  data-id='<?php echo $menu['id'] ?>' data-toggle="tooltip" title="编辑">编辑</a>
+                                                <i class="glyphicon glyphicon-trash"></i><a class="cartoon-delete" href="javascript:void(0);" data-id="<?php echo $menu['id'] ?>" data-toggle="tooltip" title="删除">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr id="s<?php echo $menu['id']; ?>" class="hidden">
+                                            <td>&nbsp;&nbsp;&nbsp;|_</td>
+                                            <td>
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>操作</th>
+                                                            <th>操作代码</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($menu['child'] as $action) { ?>
+                                                            <tr>
+                                                                <td><?php echo $action['name']; ?></td>
+                                                                <td><?php echo $action['code']; ?></td>
+                                                                <td>
+                                                                    <i class="glyphicon glyphicon-edit"></i><a href="javascript:void(0)" class='pedit'  data-id='<?php echo $action['id'] ?>' data-toggle="tooltip" title="编辑">编辑</a>
+                                                                    <i class="glyphicon glyphicon-trash"></i><a class="cartoon-delete" href="javascript:void(0);" data-id="<?php echo $action['id'] ?>" data-toggle="tooltip" title="删除">删除</a>
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>                                        
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>            
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" data-id='0' data-act='0'>添加</h4>
+                </div>
+                <div class="alert alert-danger hidden" role="alert" id='warn'>
+                    <strong>错误!</strong>
+                </div>
+                <div class="alert alert-success hidden" role="alert" id='success'>
+                    <strong>成功!</strong>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-3 control-label">名称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="填写名称，用于人识别，例如某个操作、菜单等">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCode" class="col-sm-3 control-label">权限代码</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputCode" name="code" placeholder="填写具体模块、控制器、操作方法名，例如：User、add">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-sm-3 control-label">树</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id='selectPid' name='pid'>
+                                    <option value='0'>顶级模块</option>
+                                    <?php foreach ($select as $k => $v) { ?>                                    
+                                        <option value='<?php echo $k; ?>'><?php echo $v; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <input type="hidden" name='url' id='url' value='add'>
+                                <button type="button" class="btn btn-primary" id="save"  data-loading-text="提交中...">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" id='closemodel'>关闭</button>                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(".m").click(function (event) {        //隐藏显示下级列表
+                event.preventDefault();
+                var id = $(this).attr('data-id');
+                if ($("#s" + id).hasClass("hidden")) {
+                    $("#s" + id).removeClass('hidden');
+                    $(this).parent().addClass("info");
+                }
+                else {
+                    $("#s" + id).addClass('hidden');
+                    $(this).parent().removeClass("info");
+                }
+            });
+            $("#add").click(function (event) {
+                event.preventDefault();
+                $('#myModal').modal({show: true});
+
+            });
+            $("#closemodel").click(function (event) {
+                window.location.reload();
+
+            });
+            $("#save").click(function (event) {
+                event.preventDefault();
+                var btn = $(this).button('loading')
+                var name = $("#inputName").val();
+                var code = $("#inputCode").val();
+                var pid = $("#selectPid").val();
+                var id = $("#myModalLabel").attr("data-id");
+                var act = $("#myModalLabel").attr("data-act");
+                var url = $("#url").val();
+                if (name == '') {
+                    $("#warn").html("<strong>错误!</strong> 名称不能为空");
+                    $("#warn").removeClass("hidden");
+                    btn.button('reset');
+                    return false;
+                }
+                if (code == '') {
+                    $("#warn").html("<strong>错误!</strong> 权限代码不能为空");
+                    $("#warn").removeClass("hidden");
+                    btn.button('reset');
+                    return false;
+                }
+                // business logic...
+                //btn.button('reset')
+                var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__/"; ?>" + url;
+                $.ajax({
+                    type: 'POST',
+                    data: {name: name, code: code, pid: pid, id: id, act: act},
+                    url: url,
+                    cache: false,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data) {
+                            if (data.code == 1) {
+                                $("#success").html("<strong>成功!</strong> " + data.msg);
+                                $("#success").removeClass("hidden");
+                                window.location.reload();
+                            }
+                            else {
+                                $("#warn").html("<strong>错误!</strong> " + data.msg);
+                                $("#warn").removeClass("hidden");
+                                btn.button('reset')
+                            }
+                        }
+                    }
+                });
+
+            });
+
+            $(".pedit").click(function () {     //获取编辑内容
+                event.preventDefault();
+                var ele = $(this);
+                var id = ele.attr('data-id');
+                var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__" . "/edit"; ?>";
+                $.ajax({
+                    type: 'POST',
+                    data: {id: id, act: 1},
+                    url: url,
+                    cache: false,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.code == 1) {
+                            $("#myModalLabel").attr("data-id", data.data.id);
+                            $("#myModalLabel").attr("data-act", 2);
+
+                            $("#myModalLabel").html("编辑权限" + data.data.name);
+                            $("#inputName").val(data.data.name);
+                            $("#inputCode").val(data.data.code);
+                            $("#selectPid").val(data.data.pid);
+                            $("#url").val("edit");
+                            $('#myModal').modal({show: true});
+                        }
+                        else {
+                            alert(data.msg);
+                            return false;
+                        }
+                    }
+                });
+            });
+            $(".cartoon-delete").click(function () {
+                var ele = $(this);
+                show_dialog({
+                    title: "删除确认",
+                    html: "一旦删除不可恢复，该节点下的所有权限点记录都将一起删除，确认删除？",
+                    submit_callback: function () {
+                        $(".modal-backdrop").remove();
+                        var id = ele.attr('data-id');
+                        var url = "http://" + "<?php echo BASE_URL . "__CONTROLLER__" . "/del"; ?>";
+                        $.ajax({
+                            type: 'POST',
+                            data: {id: id},
+                            url: url,
+                            cache: false,
+                            dataType: "json",
+                            success: function (data) {
+                                show_dialog({
+                                    title: "返回信息",
+                                    html: data.msg,
+                                    cancel: false,
+                                    submit_callback: function () {
+                                        window.location.reload();
+                                        return false;
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+    <include file="Common/footer" />
